@@ -1,5 +1,5 @@
+#!/usr/bin/env php
 <?php
-
 /*
  * This file is part of Flarum.
  *
@@ -11,10 +11,10 @@
 
 require 'vendor/autoload.php';
 
-$server = new Flarum\Http\Server(
+$server = new Flarum\Console\Server(
     Flarum\Foundation\Site::fromPaths([
         'base' => __DIR__,
-        'public' => __DIR__,
+        'public' => __DIR__.'/public',
         'storage' => __DIR__.'/storage',
     ])
 );
